@@ -50,7 +50,7 @@ const trips = [
 
 const {
     planTrip
-} = require("./planner/tripPlanner");
+} = require("./planner/tripplanner");
 
 
 // Test route
