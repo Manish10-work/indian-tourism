@@ -17,6 +17,7 @@ export default function App() {
 
   const [result, setResult] = useState(null);
   const [loading, setLoading] = useState(false);
+  const API_BASE_URL = "https://indian-tourism-r1ui.onrender.com";
 
   function handleChange(event) {
 
@@ -57,7 +58,7 @@ export default function App() {
     try {
 
       const response = await fetch(
-        "http://localhost:5000/api/trips/plan",
+        `${API_BASE_URL}/api/trips/plan`,
         {
           method: "POST",
 
@@ -139,7 +140,7 @@ export default function App() {
     try {
 
       const response = await fetch(
-        `http://localhost:5000/api/guides/${encodeURIComponent(place)}`
+        `${API_BASE_URL}/api/guides/${encodeURIComponent(place)}`
       );
 
       const data = await response.json();
@@ -606,7 +607,8 @@ export default function App() {
 
       </section>
       <footer>
-        <h4>Designed by Batch 11</h4>
+        <h4>Designed by Batch 11 & Deployed by Batch 12</h4>
+
 
         <p>
             India Tourism © 2026. All rights reserved.
