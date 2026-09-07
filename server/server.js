@@ -9,7 +9,6 @@ const Guide = require("./models/Guide");
 
 const app = express();
 
-const PORT = 5000;
 
 
 // Middleware
@@ -110,13 +109,10 @@ app.post("/api/trips", async (req, res) => {
 });
 
 // Start server
+const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
-
-    console.log(
-        `India Tourism API running on http://localhost:${PORT}`
-    );
-
+  console.log(`Server running on port ${PORT}`);
 });
 
 app.post("/api/trips/plan", async (req, res) => {
