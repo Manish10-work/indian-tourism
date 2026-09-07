@@ -1,0 +1,1 @@
+#hosting static app
